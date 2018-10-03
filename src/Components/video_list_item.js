@@ -1,8 +1,22 @@
 import React from "react";
 
-const VideoListItem = (props) =>{
-    return <li>Video</li>
-}
+const VideoListItem = ({video}) =>{
+    const imageUrl=video.snippet.thumbnails.default.url;
+
+
+    return(
+     <li className="list-group-item" style={{listStyle:"none"}} >
+        <div className="video-list media">
+            <div className="media-left">
+                <img className="media-object" src={imageUrl} alt="img" />
+            </div>
+            <div className="media-body">
+                <div className="media-heading">{video.snippet.title}</div>
+            </div>
+        </div>
+     </li>
+    ); 
+};
 
 
 
