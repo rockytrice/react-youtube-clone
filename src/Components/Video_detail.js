@@ -11,7 +11,7 @@ const VideoDetail= ({video})=> {
 return(
     <div className="video-detail col-md-8">
         <div className="embed-responsive embed-responsive-16by9">
-            <iframe className="embed-responsive-item" src={url} title="This is a unique title"></iframe>
+            <iframe allowfullscreen="0" className="embed-responsive-item" src={url} title="This is a unique title"></iframe>
         </div>
         <div className="details">
             <div>{video.snippet.title}</div>
