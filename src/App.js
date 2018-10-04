@@ -33,11 +33,13 @@ class App extends Component {
     return (
       <div>
       <SearchBar />
+      <div className="row">
       <VideoDetail video={this.state.selectedVideo} />
       <VideoList
       // defined a fuction that takes a video and defines it on app's state(updates app's state with a new video)
       onVideoSelect ={selectedVideo => this.setState({selectedVideo}) }
        videos={this.state.videos} />
+       </div>
       </div>
     );
   }
