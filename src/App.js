@@ -4,6 +4,7 @@ import SearchBar from "./Components/Search_bar"
 import YTSearch from "youtube-api-search"
 import VideoList from "./Components/Video_list"
 import VideoDetail from "./Components/Video_detail";
+import _ from "lodash";
 
 
 
@@ -35,9 +36,12 @@ class App extends Component {
   }
 
   render() {
+    // created a function and passed it to dbounce(which takes this inner function and returns a new function that can only be called 600 milliseconds)
+    const videoSearch=_.debounce((term) => {this.videoSearch(term) },600);
+
     return (
       <div>
-      <SearchBar onSearchTermChange={term=>this.videoSearch(term)} />
+      <SearchBar onSearchTermChange={videoSearch} />
       <div className="row">
       <VideoDetail video={this.state.selectedVideo} />
       <VideoList

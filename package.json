@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "4.0",
+    "lodash": "^4.17.11",
     "mdbreact": "^4.8.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",

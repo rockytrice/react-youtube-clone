@@ -53,3 +53,7 @@
 .list-group-item:hover{
   background-color: #eee
 }
+
+body{
+  overflow-x:hidden;
+}
