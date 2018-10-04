@@ -21,7 +21,7 @@ class App extends Component {
       selectedVideo:null
     };
 
-    YTSearch({key:API_KEY, term:"nba"}, (videos) => {
+    YTSearch({key:API_KEY, term:"React js"}, (videos) => {
       // update the value of videos..this.setState({videos:videos})
       this.setState({
         videos:videos,
@@ -34,7 +34,10 @@ class App extends Component {
       <div>
       <SearchBar />
       <VideoDetail video={this.state.selectedVideo} />
-      <VideoList videos={this.state.videos} />
+      <VideoList
+      // defined a fuction that takes a video and defines it on app's state(updates app's state with a new video)
+      onVideoSelect ={selectedVideo => this.setState({selectedVideo}) }
+       videos={this.state.videos} />
       </div>
     );
   }
