@@ -1,8 +1,10 @@
 {
+  "homepage": "http://rockytrice.github.io/react-youtube-clone",
   "name": "youtube-clone",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "lodash": "^4.17.11",
     "mdbreact": "^4.8.0",
     "react": "^16.5.2",
@@ -11,6 +13,8 @@
     "youtube-api-search": "^0.0.5"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
