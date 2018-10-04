@@ -1,6 +1,5 @@
 import React,{Component} from "react"
 
-
 class SearchBar extends Component {
     constructor(props){
         super(props);
@@ -12,13 +11,15 @@ class SearchBar extends Component {
         return (
             // create input element and pass as a prop on change with a value of this.handleInputChange
             <div className="search-bar">
-            <input 
+              <input type="text" className="form-control" placeholder="Search" 
             value={this.state.term}
             onChange={event=> 
             // set the state with the new value of term and pushes all the update info to the dom
             this.onInputChange(event.target.value)}
+            
              />
-             </div>
+             
+            </div>
         );
     }
 

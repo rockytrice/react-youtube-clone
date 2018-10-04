@@ -32,7 +32,7 @@
   text-align: center
 }
 .search-bar input {
-  width: 70%
+  width: 66%
 }
 
 .video-item img {
@@ -56,4 +56,17 @@
 
 body{
   overflow-x:hidden;
+}
+
+
+.image {
+  display: inline-block;
+  vertical-align: top;
+}
+p {
+  display: inline-block;
+}
+a.navbar-brand {
+  font-family:"League Gothic";
+  font-size: 35px;
 }

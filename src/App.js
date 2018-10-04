@@ -5,6 +5,7 @@ import YTSearch from "youtube-api-search"
 import VideoList from "./Components/Video_list"
 import VideoDetail from "./Components/Video_detail";
 import _ from "lodash";
+import Navbar from "./Components/Navbar"
 
 
 
@@ -41,7 +42,13 @@ class App extends Component {
 
     return (
       <div>
+      <Navbar>
+        <form className="form-inline">
+       
+        </form>
+      </Navbar>
       <SearchBar onSearchTermChange={videoSearch} />
+
       <div className="row">
       <VideoDetail video={this.state.selectedVideo} />
       <VideoList
@@ -55,3 +62,6 @@ class App extends Component {
 }
 
 export default App;
+
+
+/* <SearchBar onSearchTermChange={videoSearch} />  */
